@@ -2,6 +2,8 @@
 
 ## Project Description
 MindFlow is a simple frontend productivity application developed using HTML, CSS and JavaScript. It helps users organize daily tasks and ideas in one place.
+MindFlow helps users organize tasks and ideas efficiently.
+MindFlow is designed to improve daily productivity through task and idea management.
 
 ## Features
 - Add and delete tasks
