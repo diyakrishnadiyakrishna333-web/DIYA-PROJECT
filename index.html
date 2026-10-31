@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow - Productivity Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">✦ MindFlow</div>
+        <p>Organize your thoughts. Achieve your goals.</p>
+    </header>
+
+    <nav class="navbar">
+        <button class="nav-btn active" onclick="showSection('todo', this)">
+            To-Do List
+        </button>
+
+        <button class="nav-btn" onclick="showSection('mindmap', this)">
+            Mind Map
+        </button>
+    </nav>
+
+    <main>
+
+        <!-- TO-DO SECTION -->
+
+        <section id="todo" class="section active">
+
+            <div class="section-heading">
+                <h1>My Tasks</h1>
+                <p>Plan your day and stay productive.</p>
+            </div>
+
+            <div class="task-summary">
+                <div class="summary-card">
+                    <h2 id="totalTasks">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="summary-card">
+                    <h2 id="completedTasks">0</h2>
+                    <p>Completed</p>
+                </div>
+
+                <div class="summary-card">
+                    <h2 id="pendingTasks">0</h2>
+                    <p>Pending</p>
+                </div>
+            </div>
+
+            <div class="task-box">
+
+                <h2>Add New Task</h2>
+
+                <div class="task-input">
+                    <input
+                        type="text"
+                        id="todoInput"
+                        placeholder="Enter your task..."
+                    >
+
+                    <select id="todoPriority">
+                        <option value="Low">Low Priority</option>
+                        <option value="Medium">Medium Priority</option>
+                        <option value="High">High Priority</option>
+                    </select>
+
+                    <button onclick="addTodo()">+ Add Task</button>
+                </div>
+
+                <h2 class="list-title">My Task List</h2>
+
+                <ul id="todoList"></ul>
+
+                <p id="emptyMessage">No tasks yet. Add your first task!</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MIND MAP SECTION -->
+
+        <section id="mindmap" class="section">
+
+            <div class="section-heading">
+                <h1>My Mind Map</h1>
+                <p>Connect your ideas and explore your creativity.</p>
+            </div>
+
+            <div class="mindmap-box">
+
+                <h2>Create Your Ideas</h2>
+
+                <div class="idea-input">
+                    <input
+                        type="text"
+                        id="ideaInput"
+                        placeholder="Enter a new idea..."
+                    >
+
+                    <button onclick="addIdea()">+ Add Idea</button>
+                </div>
+
+                <div class="mindmap-board">
+
+                    <div class="center-node">
+                        MY GOALS
+                    </div>
+
+                    <div id="ideaNodes" class="idea-nodes">
+
+                    </div>
+
+                </div>
+
+                <button class="clear-btn" onclick="clearIdeas()">
+                    Clear All Ideas
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 MindFlow | Smart Productivity Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
