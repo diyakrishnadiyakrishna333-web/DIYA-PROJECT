@@ -203,3 +203,9 @@ function renderIdeas() {
 
 renderTodos();
 renderIdeas();
+// Allow users to press Enter to add a task
+document.getElementById("taskInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
